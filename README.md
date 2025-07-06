@@ -2,6 +2,15 @@
 
 #### Capstone Project of Summer Analytics 2025
 #### hosted by Consulting & Analytics Club × Pathway
+---
+### 👨‍💻 Author: Ritam Mondal  <a href="https://www.linkedin.com/in/ritam-mondal-86a369287/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&logoColor=white&style=for-the-badge" width="70" height = "20"/></a>  
+🎓 B.Tech + M.Tech (Dual Degree), IIT Kharagpur '28  
+📫 ritamm134@gmail.com  
+
+
+
+
+---
 
 ## 🌐 Project Overview and problem statement
 Urban parking spaces are a limited and highly demanded resource. Prices that remain static
@@ -19,7 +28,7 @@ get data sets here:
 
 ---
 
-### 🪜 Tech Stack
+## 🪜 Tech Stack
 - Python — core programming and preprocessing
 - Google Colab — Jupyter-based development
 - Pathway — real-time streaming and window-based computation
@@ -27,7 +36,7 @@ get data sets here:
 - Pandas — preprocessing of initial data
 - Git + GitHub — version control and collaboration
 
-### 📁 Project Structure
+## 📁 Project Structure
 ```
 Repositary/
 ├── Data_sets/  
@@ -45,7 +54,7 @@ Repositary/
 ├── Dynamic_Pricing_Model_2.ipynb   # Full-feature demand model
 └── README.md
 ```
-### Architecture & Workflow
+## 📊 Architecture & Workflow
 ```mermaid
 graph TD
     A[Raw CSV Data] --> B[Preprocessing: Pandas/Colab]
@@ -62,8 +71,7 @@ graph TD
 ```
 ---
 
-### 🔄 Real-Time Simulation Logic
-
+## 🔄 Real-Time Simulation Logic
 - Data ingestion via `replay_csv()` simulates delayed streaming
 - Feature engineering:
    - `Occ_rate = Occupancy / Capacity`
@@ -85,7 +93,6 @@ graph TD
     - `Occ_rate = Occupancy / Capacity`
     - `demand_rate = (latest_occ - earliest_occ) / 35`  ⬅️
     - `α = 0.5` (weight for Occ_rate)
-    - `price` was capped between ₹8 and ₹20 for stability.
 
 ---
 - **Model 2** builds a linear demand function with weights for:  [Model2 Notebook](Dynamic_Pricing_Model_2.ipynb)
@@ -112,15 +119,22 @@ graph TD
         + d * pw.this.special         # special event? raise demand
         + e * vehicle_weight          # heavier vehicle → more price willingness
         + f * demand_rate             # faster filling → higher urgency
-        + g * volatility              # rapid fluctuation → higher scarcity signal
-        
+        + g * volatility              # rapid fluctuation → higher scarcity signal  
     )
 ```
+- `price` was capped between ₹8 and ₹20 for stability.
 
+---
 
+## 🔍 Insights & Visuals
+- Price plots show clear spikes on high-demand days
+- Most systems touch upper/lower caps, indicating extreme utilization
+- Few intermediate prices suggest binary demand profile in systems
+- Daily windowing offers cleaner trend visualization
 
+---
 
-
+> 🌟 *Designed and documented by **Ritam Mondal | [IIT Kharagpur]***
 
 
                  
